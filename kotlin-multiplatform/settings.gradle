@@ -1,0 +1,4 @@
+include ':android'
+include ':common'
+include ':jvm-console'
+rootProject.name='kotlin-multiplatform'

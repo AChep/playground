@@ -1,0 +1,22 @@
+apply plugin: 'java'
+
+apply plugin: 'kotlin'
+
+dependencies {
+    implementation fileTree(dir: "${rootDir}/common/build/libs", include: ['*.jar'])
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version"
+}
+
+compileKotlin {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+compileTestKotlin {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
